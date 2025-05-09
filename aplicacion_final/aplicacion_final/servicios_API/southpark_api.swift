@@ -10,4 +10,87 @@ import SwiftUI
 class SouthParkAPI: Codable{
     let url_base = "https://spapi.dev/api"
     
+    //Personajes
+    func descargar_pagina_personajes() async -> PaginaResultado_Personaje? {
+        let ubicacion_recurso = "/characters"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_personajes(id: Int) async -> Personaje?{
+        let ubicacion_recurso = "/characters/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    //Episodios
+    func descargar_pagina_episodios() async -> PaginaResultado_Episodio? {
+        let ubicacion_recurso = "/espisodes"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_episodios(id: Int) async -> Episodio?{
+        let ubicacion_recurso = "/espisodes/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    //Familias
+    func descargar_pagina_familias() async -> PaginaResultado_Familia? {
+        let ubicacion_recurso = "/families"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_familias(id: Int) async -> Familia?{
+        let ubicacion_recurso = "/families/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    //Ubicaciones
+    func descargar_pagina_ubicaciones() async -> PaginaResultado_Ubicacion? {
+        let ubicacion_recurso = "/locations"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_ubicaciones(id: Int) async -> Ubicacion?{
+        let ubicacion_recurso = "/locations/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    
+    private func descargar<TipoGenerico: Codable>(recurso: String) async ->TipoGenerico? {
+        do{
+            guard let url = URL(string: "\(url_base)\(recurso)") else {throw ErroresDeRed.badURL}
+            let (datos, respuesta) = try await URLSession.shared.data(from: url)
+            guard let respuesta = respuesta as? HTTPURLResponse else {throw ErroresDeRed.badResponse}
+            guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else { throw
+                ErroresDeRed.badStatus}
+            do{
+                let respuesta_decodificada = try JSONDecoder().decode(TipoGenerico.self, from: datos)
+                return respuesta_decodificada
+            }
+            catch let error as NSError{
+                print("El error que tienes es:  \(error.debugDescription)")
+                throw ErroresDeRed.fallaAlConvertirRespuesta
+            }
+            
+        }
+        catch ErroresDeRed.badURL {
+            print("Hay un error en la URL, revisala porfa")
+        }
+        catch ErroresDeRed.badResponse {
+            print("Revisa la respuesta")
+        }
+        catch ErroresDeRed.badStatus {
+            print("Tienes un estatus negativo")
+        }
+        catch ErroresDeRed.fallaAlConvertirRespuesta {
+            print("Tienes mal el modelo o la implementacion de este mismo")
+            print("En SouthParkApi")
+        }
+        
+        catch ErroresDeRed.invalidRequest {
+            print("Peticion Invalida")
+        }
+        catch {
+            print("Este mensaje no lo deberias ver, algo salio mal...")
+        }
+        
+        return nil
+    }
+    
 }

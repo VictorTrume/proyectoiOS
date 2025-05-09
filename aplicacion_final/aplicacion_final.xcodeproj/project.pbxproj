@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB6320B12DCE593C0032258C /* resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B02DCE593C0032258C /* resultados.swift */; };
+		FB6320B32DCE5AC90032258C /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B22DCE5AC90032258C /* errores.swift */; };
+		FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B52DCE60C50032258C /* controlador_app_sp.swift */; };
+		FB6320BA2DCE67B70032258C /* personajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B92DCE67B70032258C /* personajes.swift */; };
 		FB9D695A2DCBBF1200BEE6D3 /* aplicacion_finalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D69592DCBBF1200BEE6D3 /* aplicacion_finalApp.swift */; };
 		FB9D695C2DCBBF1200BEE6D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D695B2DCBBF1200BEE6D3 /* ContentView.swift */; };
 		FB9D695E2DCBBF1300BEE6D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9D695D2DCBBF1300BEE6D3 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB6320B02DCE593C0032258C /* resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultados.swift; sourceTree = "<group>"; };
+		FB6320B22DCE5AC90032258C /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
+		FB6320B52DCE60C50032258C /* controlador_app_sp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app_sp.swift; sourceTree = "<group>"; };
+		FB6320B92DCE67B70032258C /* personajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personajes.swift; sourceTree = "<group>"; };
 		FB9D69562DCBBF1200BEE6D3 /* aplicacion_final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aplicacion_final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9D69592DCBBF1200BEE6D3 /* aplicacion_finalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aplicacion_finalApp.swift; sourceTree = "<group>"; };
 		FB9D695B2DCBBF1200BEE6D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB6320AF2DCE59250032258C /* soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FB6320B02DCE593C0032258C /* resultados.swift */,
+			);
+			path = soporte;
+			sourceTree = "<group>";
+		};
+		FB6320B42DCE60A10032258C /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				FB6320B52DCE60C50032258C /* controlador_app_sp.swift */,
+			);
+			path = Controlador;
+			sourceTree = "<group>";
+		};
+		FB6320B72DCE67820032258C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				FB6320B82DCE67A20032258C /* south_park */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		FB6320B82DCE67A20032258C /* south_park */ = {
+			isa = PBXGroup;
+			children = (
+				FB6320B92DCE67B70032258C /* personajes.swift */,
+			);
+			path = south_park;
+			sourceTree = "<group>";
+		};
 		FB9D694D2DCBBF1200BEE6D3 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +101,8 @@
 		FB9D69582DCBBF1200BEE6D3 /* aplicacion_final */ = {
 			isa = PBXGroup;
 			children = (
+				FB6320B72DCE67820032258C /* ui */,
+				FB6320B42DCE60A10032258C /* Controlador */,
 				FB9D696A2DCBC36E00BEE6D3 /* modelos */,
 				FB9D69672DCBC27500BEE6D3 /* servicios_API */,
 				FB9D69592DCBBF1200BEE6D3 /* aplicacion_finalApp.swift */,
@@ -83,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FB9D69682DCBC29400BEE6D3 /* southpark_api.swift */,
+				FB6320B22DCE5AC90032258C /* errores.swift */,
 			);
 			path = servicios_API;
 			sourceTree = "<group>";
@@ -98,6 +141,7 @@
 		FB9D696B2DCBC39700BEE6D3 /* south_park */ = {
 			isa = PBXGroup;
 			children = (
+				FB6320AF2DCE59250032258C /* soporte */,
 				FB9D696C2DCBC3E600BEE6D3 /* Personaje.swift */,
 				FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */,
 				FB9D69702DCBC40200BEE6D3 /* Familias.swift */,
@@ -176,10 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6320BA2DCE67B70032258C /* personajes.swift in Sources */,
+				FB6320B32DCE5AC90032258C /* errores.swift in Sources */,
 				FB9D695C2DCBBF1200BEE6D3 /* ContentView.swift in Sources */,
+				FB6320B12DCE593C0032258C /* resultados.swift in Sources */,
 				FB9D69712DCBC40200BEE6D3 /* Familias.swift in Sources */,
 				FB9D696D2DCBC3E600BEE6D3 /* Personaje.swift in Sources */,
 				FB9D69692DCBC29400BEE6D3 /* southpark_api.swift in Sources */,
+				FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */,
 				FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */,
 				FB9D69732DCBC41700BEE6D3 /* Ubicaciones.swift in Sources */,
 				FB9D695A2DCBBF1200BEE6D3 /* aplicacion_finalApp.swift in Sources */,

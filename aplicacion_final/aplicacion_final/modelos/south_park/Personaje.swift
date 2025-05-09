@@ -17,5 +17,6 @@ struct Personaje: Identifiable, Codable {
         let voiced_by : String
         let url : String
         let family : String
-        
+        let relatives: String
+        let episodes: String
 }
