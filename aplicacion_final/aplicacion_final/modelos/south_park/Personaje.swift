@@ -6,17 +6,19 @@
 //
 
 struct Personaje: Identifiable, Codable {
-        let id : Int
-        let name: String
-        let age: Int
-        let sex: String
-        let hair_color : String
-        let occupation: String
-        let grade: String
-        let religion: String
-        let voiced_by : String
-        let url : String
-        let family : String
-        let relatives: String
-        let episodes: String
+    let id: Int
+    let name: String?
+    let age: Int?
+    let sex: String?
+    let hair_color: String?
+    let occupation: String?
+    let grade: String?
+    let religion: String
+    let voiced_by: String?
+    let url: String?
+    //let family: [String]?
+    //let relatives: [String]
+    let episodes: [String]?
+    
+ 
 }

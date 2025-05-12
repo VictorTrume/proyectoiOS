@@ -9,6 +9,7 @@ import SwiftUI
 
 class SouthParkAPI: Codable{
     let url_base = "https://spapi.dev/api"
+
     
     //Personajes
     func descargar_pagina_personajes() async -> PaginaResultado_Personaje? {
@@ -22,12 +23,12 @@ class SouthParkAPI: Codable{
     }
     //Episodios
     func descargar_pagina_episodios() async -> PaginaResultado_Episodio? {
-        let ubicacion_recurso = "/espisodes"
+        let ubicacion_recurso = "/episodes"
         return await descargar(recurso: ubicacion_recurso)
     }
     
     func descargar_informacion_episodios(id: Int) async -> Episodio?{
-        let ubicacion_recurso = "/espisodes/\(id)"
+        let ubicacion_recurso = "/episodes/\(id)"
         return await descargar(recurso: ubicacion_recurso)
     }
     //Familias
@@ -57,8 +58,10 @@ class SouthParkAPI: Codable{
             guard let url = URL(string: "\(url_base)\(recurso)") else {throw ErroresDeRed.badURL}
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else {throw ErroresDeRed.badResponse}
-            guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else { throw
-                ErroresDeRed.badStatus}
+            guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else {
+                print("Código de estado HTTP recibido: \(respuesta.statusCode)")
+                throw ErroresDeRed.badStatus
+            }
             do{
                 let respuesta_decodificada = try JSONDecoder().decode(TipoGenerico.self, from: datos)
                 return respuesta_decodificada

@@ -18,33 +18,33 @@ struct Meta: Codable{
  
 struct Enlaces: Codable{
 
-    let first: String
-    let previous: String
-    let next: String
-    let last: String
+    let first: String?
+    let previous: String?
+    let next: String?
+    let last: String?
 
 }
 
 struct PaginaResultado_Personaje: Codable {
-    let items: [Personaje]
-    let meta: Meta
-    let links: Enlaces
+    let data: [Personaje]
+    let meta: Meta?
+    let links: Enlaces?
 }
 
 struct PaginaResultado_Episodio: Codable{
-    let items: [Episodio]
-    let meta: Meta
-    let link: Enlaces
+    let data: [Episodio]
+    let meta: Meta?
+    let link: Enlaces?
 }
 
 struct PaginaResultado_Familia: Codable{
-    let items: [Familia]
-    let meta: Meta
-    let link: Enlaces
+    let data: [Familia]
+    let meta: Meta?
+    let link: Enlaces?
 }
 
 struct PaginaResultado_Ubicacion: Codable{
-    let items: [Ubicacion]
-    let meta: Meta
-    let link: Enlaces
+    let data: [Ubicacion]
+    let meta: Meta?
+    let link: Enlaces?
 }

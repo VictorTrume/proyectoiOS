@@ -32,9 +32,9 @@ public class ControladorAplicacion_SP{
     init(){
         Task.detached(priority : .high){
             await self.descargar_personajes()
-            await self.descargar_episodios()
-            await self.descargar_familia()
-            await self.descargar_ubicaiones()
+            //await self.descargar_episodios()
+            //await self.descargar_familia()
+            //await self.descargar_ubicaiones()
         }
     }
     
@@ -93,7 +93,7 @@ public class ControladorAplicacion_SP{
         self.ubicaciones = locate
     }
 
-    
+    //-----------------------------------------//
     
     func descargar_informacion_personaje(id: Int){
         Task.detached(operation: {
