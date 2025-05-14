@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB3ACFBF2DD4FE6800E1317F /* capitulos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */; };
+		FB3ACFC12DD4FF4500E1317F /* temporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFC02DD4FF4500E1317F /* temporada.swift */; };
+		FB3ACFC32DD4FF6700E1317F /* temporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFC22DD4FF6700E1317F /* temporada.swift */; };
 		FB6320B12DCE593C0032258C /* resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B02DCE593C0032258C /* resultados.swift */; };
 		FB6320B32DCE5AC90032258C /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B22DCE5AC90032258C /* errores.swift */; };
 		FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B52DCE60C50032258C /* controlador_app_sp.swift */; };
@@ -15,14 +18,15 @@
 		FB9D695C2DCBBF1200BEE6D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D695B2DCBBF1200BEE6D3 /* ContentView.swift */; };
 		FB9D695E2DCBBF1300BEE6D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9D695D2DCBBF1300BEE6D3 /* Assets.xcassets */; };
 		FB9D69612DCBBF1300BEE6D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9D69602DCBBF1300BEE6D3 /* Preview Assets.xcassets */; };
-		FB9D69692DCBC29400BEE6D3 /* southpark_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D69682DCBC29400BEE6D3 /* southpark_api.swift */; };
+		FB9D69692DCBC29400BEE6D3 /* futurama_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D69682DCBC29400BEE6D3 /* futurama_api.swift */; };
 		FB9D696D2DCBC3E600BEE6D3 /* Personaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D696C2DCBC3E600BEE6D3 /* Personaje.swift */; };
 		FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */; };
-		FB9D69712DCBC40200BEE6D3 /* Familias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D69702DCBC40200BEE6D3 /* Familias.swift */; };
-		FB9D69732DCBC41700BEE6D3 /* Ubicaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D69722DCBC41700BEE6D3 /* Ubicaciones.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capitulos.swift; sourceTree = "<group>"; };
+		FB3ACFC02DD4FF4500E1317F /* temporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporada.swift; sourceTree = "<group>"; };
+		FB3ACFC22DD4FF6700E1317F /* temporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporada.swift; sourceTree = "<group>"; };
 		FB6320B02DCE593C0032258C /* resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultados.swift; sourceTree = "<group>"; };
 		FB6320B22DCE5AC90032258C /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FB6320B52DCE60C50032258C /* controlador_app_sp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app_sp.swift; sourceTree = "<group>"; };
@@ -32,11 +36,9 @@
 		FB9D695B2DCBBF1200BEE6D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB9D695D2DCBBF1300BEE6D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB9D69602DCBBF1300BEE6D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FB9D69682DCBC29400BEE6D3 /* southpark_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = southpark_api.swift; sourceTree = "<group>"; };
+		FB9D69682DCBC29400BEE6D3 /* futurama_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = futurama_api.swift; sourceTree = "<group>"; };
 		FB9D696C2DCBC3E600BEE6D3 /* Personaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personaje.swift; sourceTree = "<group>"; };
 		FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodios.swift; sourceTree = "<group>"; };
-		FB9D69702DCBC40200BEE6D3 /* Familias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Familias.swift; sourceTree = "<group>"; };
-		FB9D69722DCBC41700BEE6D3 /* Ubicaciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ubicaciones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,17 +71,19 @@
 		FB6320B72DCE67820032258C /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				FB6320B82DCE67A20032258C /* south_park */,
+				FB6320B82DCE67A20032258C /* Futurama */,
 			);
 			path = ui;
 			sourceTree = "<group>";
 		};
-		FB6320B82DCE67A20032258C /* south_park */ = {
+		FB6320B82DCE67A20032258C /* Futurama */ = {
 			isa = PBXGroup;
 			children = (
 				FB6320B92DCE67B70032258C /* personajes.swift */,
+				FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */,
+				FB3ACFC02DD4FF4500E1317F /* temporada.swift */,
 			);
-			path = south_park;
+			path = Futurama;
 			sourceTree = "<group>";
 		};
 		FB9D694D2DCBBF1200BEE6D3 = {
@@ -124,7 +128,7 @@
 		FB9D69672DCBC27500BEE6D3 /* servicios_API */ = {
 			isa = PBXGroup;
 			children = (
-				FB9D69682DCBC29400BEE6D3 /* southpark_api.swift */,
+				FB9D69682DCBC29400BEE6D3 /* futurama_api.swift */,
 				FB6320B22DCE5AC90032258C /* errores.swift */,
 			);
 			path = servicios_API;
@@ -133,21 +137,20 @@
 		FB9D696A2DCBC36E00BEE6D3 /* modelos */ = {
 			isa = PBXGroup;
 			children = (
-				FB9D696B2DCBC39700BEE6D3 /* south_park */,
+				FB9D696B2DCBC39700BEE6D3 /* futurama */,
 			);
 			path = modelos;
 			sourceTree = "<group>";
 		};
-		FB9D696B2DCBC39700BEE6D3 /* south_park */ = {
+		FB9D696B2DCBC39700BEE6D3 /* futurama */ = {
 			isa = PBXGroup;
 			children = (
 				FB6320AF2DCE59250032258C /* soporte */,
 				FB9D696C2DCBC3E600BEE6D3 /* Personaje.swift */,
 				FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */,
-				FB9D69702DCBC40200BEE6D3 /* Familias.swift */,
-				FB9D69722DCBC41700BEE6D3 /* Ubicaciones.swift */,
+				FB3ACFC22DD4FF6700E1317F /* temporada.swift */,
 			);
-			path = south_park;
+			path = futurama;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,16 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3ACFC12DD4FF4500E1317F /* temporada.swift in Sources */,
+				FB3ACFBF2DD4FE6800E1317F /* capitulos.swift in Sources */,
 				FB6320BA2DCE67B70032258C /* personajes.swift in Sources */,
+				FB3ACFC32DD4FF6700E1317F /* temporada.swift in Sources */,
 				FB6320B32DCE5AC90032258C /* errores.swift in Sources */,
 				FB9D695C2DCBBF1200BEE6D3 /* ContentView.swift in Sources */,
 				FB6320B12DCE593C0032258C /* resultados.swift in Sources */,
-				FB9D69712DCBC40200BEE6D3 /* Familias.swift in Sources */,
 				FB9D696D2DCBC3E600BEE6D3 /* Personaje.swift in Sources */,
-				FB9D69692DCBC29400BEE6D3 /* southpark_api.swift in Sources */,
+				FB9D69692DCBC29400BEE6D3 /* futurama_api.swift in Sources */,
 				FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */,
 				FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */,
-				FB9D69732DCBC41700BEE6D3 /* Ubicaciones.swift in Sources */,
 				FB9D695A2DCBBF1200BEE6D3 /* aplicacion_finalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

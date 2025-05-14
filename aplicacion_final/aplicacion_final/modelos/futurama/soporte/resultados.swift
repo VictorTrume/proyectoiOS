@@ -26,25 +26,18 @@ struct Enlaces: Codable{
 }
 
 struct PaginaResultado_Personaje: Codable {
-    let data: [Personaje]
-    let meta: Meta?
-    let links: Enlaces?
+    let items: [Personaje]
+    let total: Int
+    let page: Int
+    let size: Int
+    let pages: Int
+    
 }
 
 struct PaginaResultado_Episodio: Codable{
-    let data: [Episodio]
-    let meta: Meta?
-    let link: Enlaces?
+    let items: [Episodio]
+    let meta: Meta
+    let link: Enlaces
 }
 
-struct PaginaResultado_Familia: Codable{
-    let data: [Familia]
-    let meta: Meta?
-    let link: Enlaces?
-}
 
-struct PaginaResultado_Ubicacion: Codable{
-    let data: [Ubicacion]
-    let meta: Meta?
-    let link: Enlaces?
-}

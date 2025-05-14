@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-class SouthParkAPI: Codable{
-    let url_base = "https://spapi.dev/api"
+class FuturammaAPI: Codable{
+    let url_base = "https://futuramaapi.com/api"
 
     
     //Personajes
@@ -31,27 +31,7 @@ class SouthParkAPI: Codable{
         let ubicacion_recurso = "/episodes/\(id)"
         return await descargar(recurso: ubicacion_recurso)
     }
-    //Familias
-    func descargar_pagina_familias() async -> PaginaResultado_Familia? {
-        let ubicacion_recurso = "/families"
-        return await descargar(recurso: ubicacion_recurso)
-    }
-    
-    func descargar_informacion_familias(id: Int) async -> Familia?{
-        let ubicacion_recurso = "/families/\(id)"
-        return await descargar(recurso: ubicacion_recurso)
-    }
-    //Ubicaciones
-    func descargar_pagina_ubicaciones() async -> PaginaResultado_Ubicacion? {
-        let ubicacion_recurso = "/locations"
-        return await descargar(recurso: ubicacion_recurso)
-    }
-    
-    func descargar_informacion_ubicaciones(id: Int) async -> Ubicacion?{
-        let ubicacion_recurso = "/locations/\(id)"
-        return await descargar(recurso: ubicacion_recurso)
-    }
-    
+   
     
     private func descargar<TipoGenerico: Codable>(recurso: String) async ->TipoGenerico? {
         do{
