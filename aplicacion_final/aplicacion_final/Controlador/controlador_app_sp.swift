@@ -21,12 +21,14 @@ public class ControladorAplicacion_SP{
     //Episodio
     var episodio: Episodio? = nil
     var lista_episodio: PaginaResultado_Episodio? = nil
-
+    //Temporada
+    var temporada: Temporada? = nil
+    var lista_temporada: PaginaResultado_Temporada? = nil
     init(){
         Task.detached(priority : .high){
             await self.descargar_personajes()
-            //await self.descargar_episodios()
-            //await self.descargar_familia()
+            await self.descargar_episodios()
+            await self.descargar_temporadas()
             //await self.descargar_ubicaiones()
         }
     }
@@ -43,7 +45,12 @@ public class ControladorAplicacion_SP{
         self.lista_episodio = pagina_descargada_E
     }
     
-  
+    func descargar_temporadas() async{
+        guard let pagina_descargada_T: PaginaResultado_Temporada = try? await
+                FuturammaAPI().descargar_pagina_temporadas() else {return}
+        self.lista_temporada = pagina_descargada_T
+    }
+    
     
     
     
@@ -62,6 +69,14 @@ public class ControladorAplicacion_SP{
         self.episodio = capitulo
     }
     
+    func descargar_info_temporada(id: Int) async{
+        guard let season: Temporada = try? await
+                FuturammaAPI().descargar_informacion_temporadas(id: id) else {return}
+        
+        self.temporada = season
+    }
+
+    
 
     //-----------------------------------------//
     
@@ -73,6 +88,12 @@ public class ControladorAplicacion_SP{
     func descargar_informacion_episodio(id: Int){
         Task.detached(operation: {
             await self.descargar_info_episodio(id: id)
+        })
+    }
+    
+    func descargar_informacion_temporada(id: Int){
+        Task.detached(operation: {
+            await self.descargar_info_temporada(id: id)
         })
     }
    

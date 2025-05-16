@@ -10,6 +10,7 @@ import SwiftUI
 struct PantallaPersonajes: View{
     @Environment(ControladorAplicacion_SP.self) var controlador
     
+    //var imagen_a_mostar = temporada["1"]
     var body: some View{
         NavigationStack{
             ZStack{

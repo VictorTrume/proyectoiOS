@@ -31,6 +31,17 @@ class FuturammaAPI: Codable{
         let ubicacion_recurso = "/episodes/\(id)"
         return await descargar(recurso: ubicacion_recurso)
     }
+    
+    //Temporadas
+    func descargar_pagina_temporadas() async -> PaginaResultado_Temporada? {
+        let ubicacion_recurso = "/seasons"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    func descargar_informacion_temporadas(id: Int) async -> Temporada?{
+        let ubicacion_recurso = "/seasons/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
    
     
     private func descargar<TipoGenerico: Codable>(recurso: String) async ->TipoGenerico? {

@@ -36,8 +36,20 @@ struct PaginaResultado_Personaje: Codable {
 
 struct PaginaResultado_Episodio: Codable{
     let items: [Episodio]
-    let meta: Meta
-    let link: Enlaces
+    let total: Int
+    let page: Int
+    let size: Int
+    let pages: Int
 }
+
+
+struct PaginaResultado_Temporada: Codable{
+    let items: [Temporada]
+    let total: Int
+    let page: Int
+    let size: Int
+    let pages: Int
+}
+
 
 
