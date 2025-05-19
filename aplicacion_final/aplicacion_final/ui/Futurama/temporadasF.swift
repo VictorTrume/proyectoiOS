@@ -27,7 +27,7 @@ struct PantallaTemporadas: View{
                             ForEach(controlador.lista_temporada!.items){
                                 season in
                                 NavigationLink {
-                                    ///
+                                    TemporadaCapitulos()
                                 }label: {
                                     VStack(alignment: .leading, spacing: 12){
                                         Text("Temporada \(season.id)")
@@ -53,7 +53,12 @@ struct PantallaTemporadas: View{
                                     .shadow(radius: 10)
                                     .frame(width: 300)
                                 }
-                                        
+                                
+                                .simultaneousGesture(TapGesture().onEnded({
+                                    print("Hola mundo")
+                                    controlador.descargar_informacion_temporada(id: season.id)
+                                }))
+                                   
                             }
                         }
                     }

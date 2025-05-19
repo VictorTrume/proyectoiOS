@@ -26,7 +26,7 @@ struct PantallaPersonajes: View{
                             ForEach(controlador.lista_personaje!.items){
                                 persona in
                                 NavigationLink {
-                                    ///
+                                   
                                 }label: {
                                     VStack(alignment: .leading, spacing: 12){
                                         Text("\(persona.name)")
@@ -80,6 +80,7 @@ struct PantallaPersonajes: View{
                                     .shadow(radius: 10)
                                     .frame(width: 300)
                                 }
+                                
                                         
                             }
                         }
