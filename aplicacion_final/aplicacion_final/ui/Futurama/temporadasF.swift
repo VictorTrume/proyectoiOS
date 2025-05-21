@@ -15,43 +15,58 @@ struct PantallaTemporadas: View{
     var body: some View{
         NavigationStack{
             ZStack{
-               // Color.black.ignoresSafeArea()
+                Image("fbck")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+
+        
+                Color.black.opacity(0.5)
+                    .ignoresSafeArea()
                 
                 if controlador.lista_temporada != nil {
                     ScrollView{
                         LazyVStack{
                             Text("Temporadas")
-                                .font(.system(size: 40))
-                                .foregroundColor(.black)
-                                .bold()
+                                .font(.title)
+                                .fontWeight(.heavy)
+                                .foregroundColor(.yellow)
+                                .multilineTextAlignment(.center)
+                                .padding(.horizontal)
+                            
                             ForEach(controlador.lista_temporada!.items){
                                 season in
                                 NavigationLink {
                                     TemporadaCapitulos()
                                 }label: {
                                     VStack(alignment: .leading, spacing: 12){
-                                        Text("Temporada \(season.id)")
-                                            .font(.system(size: 30))
-                                            .foregroundColor(.white)
-                                            .bold()
-                                            .frame(maxWidth: .infinity)
+                                       
                                         
                                         if let imagenNombre = temporada_imagenes["\(season.id)"] {
                                                 Image(imagenNombre)
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
-                                                    .frame(width: 150, height: 250)
+                                                    .frame(width: 200, height: 250)
                                                     .frame(maxWidth: .infinity)
                                                     .clipped()
                                                     .cornerRadius(10)
                                                                             }
+                                        Text("Temporada \(season.id)")
+                                            .font(.system(size: 30))
+                                            .foregroundColor(.white)
+                                            .bold()
+                                            .frame(maxWidth: .infinity)
                                        
                                     }
                                     .padding()
-                                    .background(Color.blue.opacity(0.9))
-                                    .cornerRadius(80)
-                                    .shadow(radius: 10)
-                                    .frame(width: 300)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 200)
+                                        .fill(Color.blue.opacity(0.2))
+                                        .overlay(
+                                        RoundedRectangle(cornerRadius: 200)
+                                        .stroke(Color.cyan, lineWidth: 2))
+                                                                                   
+                                    )
                                 }
                                 
                                 .simultaneousGesture(TapGesture().onEnded({

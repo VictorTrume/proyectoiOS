@@ -15,13 +15,16 @@ struct MenuNavegacion: View {
             
        
        
-            
+            PantallaLanding()
+                .tabItem{Label("Introduccion",
+                                    systemImage: "circle")}
             PantallaPersonajes()
-                .tabItem{Label("Personjes",
+                .tabItem{Label("Personajes",
                                     systemImage: "circle")}
             PantallaTemporadas()
-                .tabItem{Label("Capitulos",
+                .tabItem{Label("Temporadas",
                                     systemImage: "circle")}
+            
             /*
             PerfilBasicoVista()
             
