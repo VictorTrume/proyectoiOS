@@ -7,45 +7,40 @@
 
 import SwiftUI
 
-struct PantallaPersonajes: View{
+struct PantallaPersonajes: View {
     @Environment(ControladorAplicacion_SP.self) var controlador
-    
-    //var imagen_a_mostar = temporada["1"]
-    var body: some View{
-        NavigationStack{
-            ZStack{
-                Image("fbck")
-                    .resizable()
-                    .scaledToFill()
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.9), Color.cyan.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
 
-        
-                Color.black.opacity(0.5)
-                    .ignoresSafeArea()
-                
-                if controlador.lista_personaje != nil {
-                    ScrollView{
-                        LazyVStack{
+                if let lista = controlador.lista_personaje {
+                    ScrollView {
+                        LazyVStack(spacing: 20) {
+                         
                             Text("Personajes de Futurama")
-                                .font(.title)
-                                .fontWeight(.heavy)
+                                .font(.system(size: 32, weight: .heavy, design: .rounded))
                                 .foregroundColor(.yellow)
-                                .multilineTextAlignment(.center)
-                                .padding(.top, 20)
-                                
-                            ForEach(controlador.lista_personaje!.items){
-                                persona in
+                                .bold()
+                                .shadow(color: .white.opacity(0.5), radius: 4, x: 0, y: 2)
+                                .padding(.top, 30)
+
+                      
+                            ForEach(lista.items) { persona in
                                 NavigationLink {
-                                   DetallesPersonaje()
-                                }label: {
-                                    VStack(alignment: .leading, spacing: 12){
-                                        Text("\(persona.name)")
-                                            .font(.system(size: 20))
+                                    DetallesPersonaje()
+                                } label: {
+                                    VStack(spacing: 12) {
+                                      
+                                        Text(persona.name)
+                                            .font(.system(size: 20, weight: .bold, design: .rounded))
                                             .foregroundColor(.white)
-                                            .bold()
-                                            .frame(maxWidth: .infinity)
+                                            .frame(maxWidth: .infinity, alignment: .center)
+
                                         
-                                        
+                                    
                                         if let imageUrlString = persona.image, let url = URL(string: imageUrlString) {
                                             HStack {
                                                 Spacer()
@@ -83,38 +78,43 @@ struct PantallaPersonajes: View{
                                             }
                                         }
 
-                                         
-                                       
                                     }
                                     .padding()
                                     .background(
-                                        RoundedRectangle(cornerRadius: 200)
-                                        .fill(Color.blue.opacity(0.2))
-                                        .overlay(
-                                        RoundedRectangle(cornerRadius: 200)
-                                        .stroke(Color.cyan, lineWidth: 2))
-                                                                                   
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .fill(Color.white.opacity(0.1))
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 15)
+                                                    .stroke(Color.yellow.opacity(0.6), lineWidth: 4)
+                                            )
                                     )
-                                    
+                                    .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 3)
+                                    .padding(.horizontal, 16)
+                                    .animation(.easeIn(duration: 0.3), value: lista.items.count)
                                 }
-                                .simultaneousGesture(TapGesture().onEnded({
-                                    print("Hola mundo")
+                                .simultaneousGesture(TapGesture().onEnded {
                                     controlador.descargar_informacion_personaje(id: persona.id)
-                                }))
-                                
-                                        
+                                })
                             }
+
+                            Spacer().frame(height: 30)
                         }
                     }
-                }
-                else {
-                    Text("Esto esta vacio")
+                } else {
+                    Text("No hay datos disponibles.")
+                        .font(.system(size: 20, weight: .medium, design: .rounded))
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding()
                 }
             }
         }
     }
 }
+
 #Preview {
     PantallaPersonajes()
         .environment(ControladorAplicacion_SP())
 }
+
+
+

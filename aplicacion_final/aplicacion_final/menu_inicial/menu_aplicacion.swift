@@ -5,38 +5,39 @@
 //  Created by alumno on 5/19/25.
 //
 
-
 import SwiftUI
 
 struct MenuNavegacion: View {
     @Environment(ControladorAplicacion_SP.self) var controlador
+    
     var body: some View {
-        TabView{
+        
+
+        TabView {
             
-       
-       
             PantallaLanding()
-                .tabItem{Label("Introduccion",
-                                    systemImage: "circle")}
+                .tabItem {
+                    Label("Inicio", systemImage: "house")
+                }
+            
             PantallaPersonajes()
-                .tabItem{Label("Personajes",
-                                    systemImage: "circle")}
+                .tabItem {
+                    Label("Personajes", systemImage: "star")
+                }
+            
             PantallaTemporadas()
-                .tabItem{Label("Temporadas",
-                                    systemImage: "circle")}
+                .tabItem {
+                    Label("Temporadas", systemImage: "film")
+                }
             
             /*
             PerfilBasicoVista()
-            
-                .tabItem { Label("Usuario",
-                systemImage: "circle") }
-             */
-            /*
-            Tab("Etiqueta", systemImage: "Perfil"){
-                Text("Referencia a la pantalla")
-            }
-             */
+                .tabItem {
+                    Label("Usuario", systemImage: "person.crop.circle")
+                }
+            */
         }
+        .tint(.yellow)
     }
 }
 
@@ -44,4 +45,5 @@ struct MenuNavegacion: View {
     MenuNavegacion()
         .environment(ControladorAplicacion_SP())
 }
+
 

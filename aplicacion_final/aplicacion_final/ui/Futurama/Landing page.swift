@@ -12,63 +12,60 @@ struct PantallaLanding: View {
     var body: some View {
         NavigationStack {
             ZStack {
-               
-                Image("fbck")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-
-        
-                Color.black.opacity(0.5)
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.9), Color.cyan.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
 
                 ScrollView {
-                    LazyVStack(spacing: 20) {
-                        Spacer().frame(height: 40)
-
-                       
+                    VStack(spacing: 25) {
+                        
                         Image("Flogo")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 180, height: 180)
+                            .frame(width: 150, height: 150)
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.yellow, lineWidth: 4))
-                            .shadow(radius: 10)
+                            .shadow(color: .white.opacity(0.6), radius: 10, x: 0, y: 5)
+                            .padding(.top, 50)
 
-                    
+                        
                         Text("¡Bienvenidos al mundo del mañana!")
-                            .font(.title)
-                            .fontWeight(.heavy)
+                            .font(.system(size: 26, weight: .heavy, design: .rounded))
                             .foregroundColor(.yellow)
                             .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-
-                     
+                            .padding(.horizontal, 20)
+                            .shadow(color: .yellow.opacity(0.3), radius: 10, x: 0, y: 5)
+                 
                         VStack(alignment: .leading, spacing: 12) {
                             Text("""
                             Esta es una aplicación conectada a “https://futuramaapi.com/” que permite obtener información relacionada a la serie animada de FOX “Futurama”.
-                            
+
                             Puedes consultar una lista de personajes y temporadas. Cada temporada contiene una lista de capítulos que le corresponden.
-                            
+
                             NOTA: Las temporadas y capítulos se muestran en su orden de emisión.
                             """)
-                                .font(.body)
+                                .font(.system(size: 16, weight: .medium, design: .rounded))
                                 .foregroundColor(.white)
-                                .bold()
+                                .multilineTextAlignment(.leading)
                         }
-                        .padding()
-                        .background(Color.black.opacity(0.4))
+                        .padding(16)
+                        .background(Color.black.opacity(0.8))
                         .cornerRadius(15)
-                        .padding(.horizontal)
+                        .bold()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                            
+                                .stroke(Color.yellow.opacity(0.9), lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
 
-                   
+                        // Imagen final
                         Image("fpng")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 250)
+                            .frame(width: 220)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.cyan, lineWidth: 3))
-                            .shadow(radius: 8)
+                            .overlay(Circle().stroke(Color.yellow, lineWidth: 3))
+                            .shadow(color: .cyan.opacity(0.6), radius: 8, x: 0, y: 4)
 
                         Spacer().frame(height: 40)
                     }

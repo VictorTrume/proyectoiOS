@@ -23,6 +23,7 @@
 		FBB8CF7D2DD7922A0034D4DA /* imagenes_temporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF7C2DD7922A0034D4DA /* imagenes_temporada.swift */; };
 		FBB8CF7F2DD793380034D4DA /* temporadasF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF7E2DD793380034D4DA /* temporadasF.swift */; };
 		FBB8CF812DD799860034D4DA /* TemporadasF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF802DD799860034D4DA /* TemporadasF.swift */; };
+		FBDE3E9E2DE4D1D000AB6C85 /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDE3E9D2DE4D1D000AB6C85 /* perfil.swift */; };
 		FBE15EA32DDE2838003029A1 /* Landing page.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE15EA22DDE2838003029A1 /* Landing page.swift */; };
 		FBE15EA52DDE2FAA003029A1 /* detallespersonaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE15EA42DDE2FAA003029A1 /* detallespersonaje.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		FBB8CF7C2DD7922A0034D4DA /* imagenes_temporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagenes_temporada.swift; sourceTree = "<group>"; };
 		FBB8CF7E2DD793380034D4DA /* temporadasF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporadasF.swift; sourceTree = "<group>"; };
 		FBB8CF802DD799860034D4DA /* TemporadasF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporadasF.swift; sourceTree = "<group>"; };
+		FBDE3E9D2DE4D1D000AB6C85 /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FBE15EA22DDE2838003029A1 /* Landing page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Landing page.swift"; sourceTree = "<group>"; };
 		FBE15EA42DDE2FAA003029A1 /* detallespersonaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detallespersonaje.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 		FB9D69582DCBBF1200BEE6D3 /* aplicacion_final */ = {
 			isa = PBXGroup;
 			children = (
+				FBDE3E9C2DE4D1BD00AB6C85 /* perfil_basico */,
 				FBB247162DDB8D7F0087EEAA /* menu_inicial */,
 				FB6320B72DCE67820032258C /* ui */,
 				FB6320B42DCE60A10032258C /* Controlador */,
@@ -179,6 +182,14 @@
 				FBB8CF7C2DD7922A0034D4DA /* imagenes_temporada.swift */,
 			);
 			path = rsc;
+			sourceTree = "<group>";
+		};
+		FBDE3E9C2DE4D1BD00AB6C85 /* perfil_basico */ = {
+			isa = PBXGroup;
+			children = (
+				FBDE3E9D2DE4D1D000AB6C85 /* perfil.swift */,
+			);
+			path = perfil_basico;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				FBE15EA52DDE2FAA003029A1 /* detallespersonaje.swift in Sources */,
 				FB9D69692DCBC29400BEE6D3 /* futurama_api.swift in Sources */,
 				FBE15EA32DDE2838003029A1 /* Landing page.swift in Sources */,
+				FBDE3E9E2DE4D1D000AB6C85 /* perfil.swift in Sources */,
 				FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */,
 				FBB8CF812DD799860034D4DA /* TemporadasF.swift in Sources */,
 				FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */,

@@ -8,85 +8,80 @@
 
 import SwiftUI
 
-struct PantallaTemporadas: View{
+struct PantallaTemporadas: View {
     @Environment(ControladorAplicacion_SP.self) var controlador
-    
-    var imagen_a_mostar = temporada_imagenes["1"]
-    var body: some View{
-        NavigationStack{
-            ZStack{
-                Image("fbck")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
 
-        
-                Color.black.opacity(0.5)
+    var body: some View {
+        NavigationStack {
+            ZStack {
+            
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.9), Color.cyan.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
-                if controlador.lista_temporada != nil {
-                    ScrollView{
-                        LazyVStack{
+                if let listaTemporadas = controlador.lista_temporada {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                          
                             Text("Temporadas")
-                                .font(.title)
-                                .fontWeight(.heavy)
+                                .font(.system(size: 32, weight: .heavy, design: .rounded))
                                 .foregroundColor(.yellow)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
+                                .bold()
+                                .shadow(color: .white.opacity(0.5), radius: 4, x: 0, y: 2)
+                                .padding(.top, 30)
+
                             
-                            ForEach(controlador.lista_temporada!.items){
-                                season in
+                       
+                            ForEach(listaTemporadas.items) { season in
                                 NavigationLink {
                                     TemporadaCapitulos()
-                                }label: {
-                                    VStack(alignment: .leading, spacing: 12){
-                                       
-                                        
+                                } label: {
+                                    VStack(spacing: 12) {
                                         if let imagenNombre = temporada_imagenes["\(season.id)"] {
-                                                Image(imagenNombre)
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .frame(width: 200, height: 250)
-                                                    .frame(maxWidth: .infinity)
-                                                    .clipped()
-                                                    .cornerRadius(10)
-                                                                            }
+                                            Image(imagenNombre)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fill)
+                                                .frame(width: 200, height: 250)
+                                                .clipped()
+                                                .cornerRadius(12)
+                                                .shadow(color: .cyan.opacity(0.5), radius: 6, x: 0, y: 3)
+                                        }
+                                        
                                         Text("Temporada \(season.id)")
-                                            .font(.system(size: 30))
+                                            .font(.system(size: 22, weight: .bold, design: .rounded))
                                             .foregroundColor(.white)
-                                            .bold()
-                                            .frame(maxWidth: .infinity)
-                                       
                                     }
+                                    .frame(maxWidth: .infinity)
                                     .padding()
                                     .background(
-                                        RoundedRectangle(cornerRadius: 200)
-                                        .fill(Color.blue.opacity(0.2))
-                                        .overlay(
-                                        RoundedRectangle(cornerRadius: 200)
-                                        .stroke(Color.cyan, lineWidth: 2))
-                                                                                   
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .fill(Color.white.opacity(0.1))
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .stroke(Color.yellow.opacity(0.7), lineWidth: 4)
+                                            )
                                     )
+                                    .shadow(color: .black.opacity(0.3), radius: 4, x: 0, y: 3)
+                                    .padding(.horizontal, 16)
                                 }
-                                
-                                .simultaneousGesture(TapGesture().onEnded({
-                                    print("Hola mundo")
+                                .simultaneousGesture(TapGesture().onEnded {
                                     controlador.descargar_informacion_temporada(id: season.id)
-                                }))
-                                   
+                                })
                             }
+                            
+                            Spacer().frame(height: 30)
                         }
                     }
-                }
-                else {
-                    Text("Esto esta vacio")
+                } else {
+                 
+                    Text("No hay temporadas disponibles.")
+                        .font(.system(size: 20, weight: .medium, design: .rounded))
+                        .foregroundColor(.white.opacity(0.8))
+                        .padding()
                 }
             }
         }
-               
-            }
-        }
-    
+    }
+}
 
 #Preview {
     PantallaTemporadas()
