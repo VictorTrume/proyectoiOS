@@ -30,6 +30,11 @@ struct MenuNavegacion: View {
                     Label("Temporadas", systemImage: "film")
                 }
             
+            PantallaTodoscap()
+                .tabItem {
+                    Label("Capitulos", systemImage: "tv")
+                }
+            
             /*
             PerfilBasicoVista()
                 .tabItem {

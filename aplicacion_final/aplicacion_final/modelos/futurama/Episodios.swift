@@ -13,7 +13,9 @@ struct Episodio: Identifiable, Codable {
     let airDate: String?
     let duration: Int?
     let createdAt: String?
-    let season: [Temporada]?
+  
     let broadcastCode: String?
+    
+    
   }
 

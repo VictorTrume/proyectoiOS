@@ -11,6 +11,7 @@ struct DetallesPersonaje: View {
     
     @Environment(ControladorAplicacion_SP.self) var controlador
     @State private var mostrarAlerta = true
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -51,7 +52,7 @@ struct DetallesPersonaje: View {
                         
                         
                     } else {
-                        Text("URL inválida")
+                        Text("Imagen no disponible")
                             .frame(width: 150, height: 250)
                             .background(Color.gray.opacity(0.2))
                             .cornerRadius(10)
@@ -83,8 +84,12 @@ struct DetallesPersonaje: View {
                 }
                 .alert("¡ALERTA SPOILER!", isPresented: $mostrarAlerta) {
                 Button("Ok", role: .cancel) { }
+                    
+                    Button("Regresar", role: .destructive) {
+                                    dismiss()  
+                                }
                         } message: {
-                            Text("¡Atención! Esta vista puede contener spoilers.")
+                            Text("¡Atención! puede haber spoilers en esta pantalla. Si no quieres correr el riesgo tienes que ver Futurama completo")
                         }
 
 
