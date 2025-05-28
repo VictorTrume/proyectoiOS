@@ -15,36 +15,44 @@ struct MenuNavegacion: View {
 
         TabView {
             
-            PantallaLanding()
-                .tabItem {
-                    Label("Inicio", systemImage: "house")
-                }
-            
-            PantallaPersonajes()
-                .tabItem {
-                    Label("Personajes", systemImage: "star")
-                }
-            
-            PantallaTemporadas()
-                .tabItem {
-                    Label("Temporadas", systemImage: "film")
-                }
-            
-            PantallaTodoscap()
-                .tabItem {
-                    Label("Capitulos", systemImage: "tv")
-                }
-            
-            /*
-            PerfilBasicoVista()
-                .tabItem {
-                    Label("Usuario", systemImage: "person.crop.circle")
-                }
-            */
+            NavigationStack {
+                            PantallaLanding()
+                        }
+                        .toolbarBackground(.visible, for: .tabBar)
+                        .tabItem {
+                            Label("Inicio", systemImage: "house.fill")
+                        }
+                        NavigationStack {
+                            PantallaPersonajes()
+                        }
+                        .toolbarBackground(.visible, for: .tabBar)
+                        .tabItem {
+                            Label("Personajes", systemImage: "person.fill")
+                        }
+                        NavigationStack {
+                            PantallaTemporadas()
+                        }
+                        .toolbarBackground(.visible, for: .tabBar)
+                        .tabItem {
+                            Label("Temporadas", systemImage: "square.stack.fill")
+                        }
+
+                        NavigationStack {
+                            PantallaTodoscap()
+                        }
+                        .toolbarBackground(.visible, for: .tabBar)
+                        .tabItem {
+                            Label("Episodios", systemImage: "tv.fill")
+                        }
+
+                    }
+
+        .accentColor(Color.yellow)
+             
         }
-        .tint(.yellow)
+        
     }
-}
+
 
 #Preview {
     MenuNavegacion()

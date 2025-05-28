@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB0AA0E12DE4E1C800A73287 /* capitulo_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0AA0E02DE4E1C800A73287 /* capitulo_general.swift */; };
 		FB0AA0E32DE4F83F00A73287 /* texto_bonito_titulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0AA0E22DE4F83F00A73287 /* texto_bonito_titulo.swift */; };
-		FB3ACFBF2DD4FE6800E1317F /* capitulos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */; };
+		FB3ACFBF2DD4FE6800E1317F /* capitulos_temporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3ACFBE2DD4FE6800E1317F /* capitulos_temporada.swift */; };
 		FB6320B12DCE593C0032258C /* resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B02DCE593C0032258C /* resultados.swift */; };
 		FB6320B32DCE5AC90032258C /* errores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B22DCE5AC90032258C /* errores.swift */; };
 		FB6320B62DCE60C50032258C /* controlador_app_sp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6320B52DCE60C50032258C /* controlador_app_sp.swift */; };
@@ -24,7 +24,7 @@
 		FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */; };
 		FBB247182DDB8D9F0087EEAA /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB247172DDB8D9F0087EEAA /* menu_aplicacion.swift */; };
 		FBB8CF7D2DD7922A0034D4DA /* imagenes_temporada.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF7C2DD7922A0034D4DA /* imagenes_temporada.swift */; };
-		FBB8CF7F2DD793380034D4DA /* temporadasF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF7E2DD793380034D4DA /* temporadasF.swift */; };
+		FBB8CF7F2DD793380034D4DA /* temporadas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF7E2DD793380034D4DA /* temporadas.swift */; };
 		FBB8CF812DD799860034D4DA /* TemporadasF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8CF802DD799860034D4DA /* TemporadasF.swift */; };
 		FBE15EA32DDE2838003029A1 /* pagina_principal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE15EA22DDE2838003029A1 /* pagina_principal.swift */; };
 		FBE15EA52DDE2FAA003029A1 /* detalles_personaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE15EA42DDE2FAA003029A1 /* detalles_personaje.swift */; };
@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		FB0AA0E02DE4E1C800A73287 /* capitulo_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capitulo_general.swift; sourceTree = "<group>"; };
 		FB0AA0E22DE4F83F00A73287 /* texto_bonito_titulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = texto_bonito_titulo.swift; sourceTree = "<group>"; };
-		FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capitulos.swift; sourceTree = "<group>"; };
+		FB3ACFBE2DD4FE6800E1317F /* capitulos_temporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = capitulos_temporada.swift; sourceTree = "<group>"; };
 		FB6320B02DCE593C0032258C /* resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultados.swift; sourceTree = "<group>"; };
 		FB6320B22DCE5AC90032258C /* errores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errores.swift; sourceTree = "<group>"; };
 		FB6320B52DCE60C50032258C /* controlador_app_sp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app_sp.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		FB9D696E2DCBC3F400BEE6D3 /* Episodios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodios.swift; sourceTree = "<group>"; };
 		FBB247172DDB8D9F0087EEAA /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 		FBB8CF7C2DD7922A0034D4DA /* imagenes_temporada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagenes_temporada.swift; sourceTree = "<group>"; };
-		FBB8CF7E2DD793380034D4DA /* temporadasF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporadasF.swift; sourceTree = "<group>"; };
+		FBB8CF7E2DD793380034D4DA /* temporadas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = temporadas.swift; sourceTree = "<group>"; };
 		FBB8CF802DD799860034D4DA /* TemporadasF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporadasF.swift; sourceTree = "<group>"; };
 		FBE15EA22DDE2838003029A1 /* pagina_principal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_principal.swift; sourceTree = "<group>"; };
 		FBE15EA42DDE2FAA003029A1 /* detalles_personaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detalles_personaje.swift; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FB6320B92DCE67B70032258C /* personajes.swift */,
-				FB3ACFBE2DD4FE6800E1317F /* capitulos.swift */,
-				FBB8CF7E2DD793380034D4DA /* temporadasF.swift */,
+				FB3ACFBE2DD4FE6800E1317F /* capitulos_temporada.swift */,
+				FBB8CF7E2DD793380034D4DA /* temporadas.swift */,
 				FBE15EA22DDE2838003029A1 /* pagina_principal.swift */,
 				FBE15EA42DDE2FAA003029A1 /* detalles_personaje.swift */,
 				FB0AA0E02DE4E1C800A73287 /* capitulo_general.swift */,
@@ -255,7 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB3ACFBF2DD4FE6800E1317F /* capitulos.swift in Sources */,
+				FB3ACFBF2DD4FE6800E1317F /* capitulos_temporada.swift in Sources */,
 				FB6320BA2DCE67B70032258C /* personajes.swift in Sources */,
 				FB6320B32DCE5AC90032258C /* errores.swift in Sources */,
 				FBB247182DDB8D9F0087EEAA /* menu_aplicacion.swift in Sources */,
@@ -272,7 +272,7 @@
 				FBB8CF812DD799860034D4DA /* TemporadasF.swift in Sources */,
 				FB9D696F2DCBC3F400BEE6D3 /* Episodios.swift in Sources */,
 				FBB8CF7D2DD7922A0034D4DA /* imagenes_temporada.swift in Sources */,
-				FBB8CF7F2DD793380034D4DA /* temporadasF.swift in Sources */,
+				FBB8CF7F2DD793380034D4DA /* temporadas.swift in Sources */,
 				FB0AA0E12DE4E1C800A73287 /* capitulo_general.swift in Sources */,
 				FB9D695A2DCBBF1200BEE6D3 /* aplicacion_finalApp.swift in Sources */,
 			);
