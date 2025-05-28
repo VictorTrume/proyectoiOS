@@ -77,12 +77,12 @@ struct DetallesPersonaje: View {
                 }
             
                 .onAppear {
-                            
-                mostrarAlerta = true
+                    
+                    mostrarAlerta = true
                 }
-                    }
-                }
-                .alert("¡ALERTA SPOILER!", isPresented: $mostrarAlerta) {
+            }
+        }
+        .alert("¡ALERTA SPOILER!", isPresented: $mostrarAlerta) {
                 Button("Ok", role: .cancel) { }
                     
                     Button("Regresar", role: .destructive) {
@@ -97,24 +97,6 @@ struct DetallesPersonaje: View {
         }
     
 
-
-struct DetalleTexto: View {
-    var titulo: String
-    var valor: String?
-    
-    var body: some View {
-        HStack {
-            Text("\(titulo):")
-                .foregroundColor(.yellow)
-                .fontWeight(.bold)
-            Spacer()
-            Text(valor ?? "Desconocido")
-                .foregroundColor(.white)
-                .fontWeight(.semibold)
-        }
-        .padding(.horizontal)
-    }
-}
 
 #Preview {
     NavigationStack {

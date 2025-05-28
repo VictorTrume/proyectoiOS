@@ -18,14 +18,7 @@ struct PantallaTemporadas: View {
                     .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    Text("Temporadas")
-                        .font(.system(size: 32, weight: .heavy, design: .rounded))
-                        .foregroundColor(.yellow)
-                        .bold()
-                        .shadow(color: .white.opacity(0.5), radius: 4, x: 0, y: 2)
-                        .padding(.top, 30)
-                        .padding(.bottom, 10)
-                        .zIndex(1)
+                    TituloBonito(texto: "Temporadas")
 
                     if let listaTemporadas = controlador.lista_temporada {
                         ScrollView {
@@ -80,7 +73,6 @@ struct PantallaTemporadas: View {
                             .foregroundColor(.white.opacity(0.8))
                             .padding()
                     }
-                    
                 }
             }
         }

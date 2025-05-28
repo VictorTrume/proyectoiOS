@@ -12,8 +12,7 @@ struct Episodio: Identifiable, Codable {
     let productionCode: String
     let airDate: String?
     let duration: Int?
-    let createdAt: String?
-  
+    let createdAt: String?  
     let broadcastCode: String?
     
     

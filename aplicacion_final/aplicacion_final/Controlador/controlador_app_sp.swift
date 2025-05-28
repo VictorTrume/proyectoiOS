@@ -24,6 +24,7 @@ public class ControladorAplicacion_SP{
     //Temporada
     var temporada: Temporada? = nil
     var lista_temporada: PaginaResultado_Temporada? = nil
+    
     init(){
         Task.detached(priority : .high){
             await self.descargar_personajes()

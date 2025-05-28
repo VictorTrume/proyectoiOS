@@ -15,6 +15,8 @@ struct PantallaLanding: View {
                 LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.9), Color.cyan.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
 
+                
+                
                 ScrollView {
                     VStack(spacing: 25) {
                         
@@ -58,7 +60,28 @@ struct PantallaLanding: View {
                         )
                         .padding(.horizontal, 20)
 
-                        // Imagen final
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("""
+                            ¿Qué es el código de producción?
+
+                            Es un código que nos dice el orden correcto de los capítulos.
+                            """)
+                                .font(.system(size: 16, weight: .medium, design: .rounded))
+                                .foregroundColor(.white)
+                                .multilineTextAlignment(.leading)
+                        }
+                        .padding(16)
+                        .background(Color.black.opacity(0.8))
+                        .cornerRadius(15)
+                        .bold()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                            
+                                .stroke(Color.yellow.opacity(0.9), lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
+                  
                         Image("fpng")
                             .resizable()
                             .scaledToFit()
